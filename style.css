@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  position: absolute;
+  left: 350px;
+}
+
+.wrapper {
+  background-color: linen;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.option {
+  height: 100px;
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.option input {
+  display: none;
+}
+
+.option label {
+  font-family: 'Dosis', sans-serif;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.option label::after {
+  content: '';
+  position: absolute;
+  right: 15%;
+  height: 50px;
+  width: 50px;
+  border: 5px solid #75595d;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(37, 61, 91, 0.8);
+}
+
+.option label::before {
+  background-color: #75595d;
+  content: '';
+  position: absolute;
+  top: 42.25%;
+  transform: translateY(-50%);
+  right: 17.25%;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(37, 61, 91, 0.8);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.option input:checked ~ label::before {
+  opacity: 1;
+}
